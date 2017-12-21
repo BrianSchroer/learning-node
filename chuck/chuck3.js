@@ -1,18 +1,20 @@
 const readline = require('readline');
 const fs = require('fs');
 
-let chuckCounter = 0;
+exports.getChuckNorrisFact = (callback) => {
+  let chuckCounter = 0
 
-const chuckLine = Math.floor(Math.random() * (86)) + 1;
+  const chuckLine = Math.floor(Math.random() * (86)) + 1;
 
-const rl = readline.createInterface({
-  input: fs.createReadStream('chuck.txt')
-});
+  const rl = readline.createInterface({
+    input: fs.createReadStream('chuck.txt')
+  });
 
-rl.on('line', (line) => {
-  if (chuckCounter == chuckLine) {
-    console.log(`#${chuckLine}: ${line}`);
-  }
+  rl.on('line', (line) => {
+    if (chuckCounter == chuckLine) {
+      callback(`#${chuckLine}: ${line}`);
+    }
 
-  chuckCounter++;
-});
+    chuckCounter++;
+  });
+}
