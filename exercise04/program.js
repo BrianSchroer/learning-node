@@ -6,7 +6,7 @@ fs.readFile(fileName, 'utf8', (err, fileContents) => { // utf8 tells readFile to
   if (err) {
     if (err.code === 'ENOENT') {
       console.log(`File not found: "${fileName}"`);
-      return
+      return;
     }
 
     throw err;
