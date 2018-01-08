@@ -7,13 +7,10 @@ if (!fs.existsSync(fileName)) {
   return;
 }
 
-let lineCount = 0;
-
 try {
   const buffer = fs.readFileSync(fileName);
-  lineCount = buffer.toString().split('\n').length - 1;
+  const lineCount = buffer.toString().split('\n').length - 1;
+  console.log(lineCount);
 } catch (err) {
   console.log(err);
 }
-
-console.log(lineCount);
