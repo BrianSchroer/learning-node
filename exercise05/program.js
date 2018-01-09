@@ -18,8 +18,3 @@ fs.readdir(directoryName, 'utf8', (err, files) => {
     .filter(file => path.extname(file) === extension)
     .forEach(file => console.log(file));
 });
-
-function getExtension() {
-  const extension = process.argv[3] || 'js';
-  return (extension.startsWith('.')) ? extension : `.${extension}`;
-}
