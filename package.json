@@ -1,9 +1,10 @@
 {
-  "name": "exercise12",
+  "name": "learning-node-and-mongo",
   "version": "1.0.0",
   "description": "",
   "main": "program.js",
   "dependencies": {
+    "mongodb": "^3.0.1",
     "through2-map": "^3.0.0"
   },
   "devDependencies": {},
@@ -11,5 +12,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrianSchroer/learning-node-and-mongo"
+  }
 }
