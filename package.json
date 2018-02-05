@@ -4,6 +4,9 @@
   "description": "",
   "main": "program.js",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
     "fs-extra": "^5.0.0",
     "mongodb": "^3.0.1",
     "through2-map": "^3.0.0"
